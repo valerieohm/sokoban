@@ -1,3 +1,5 @@
+coverage_report
+.github
 .vscode
 *.code-workspace
 # Prerequisites

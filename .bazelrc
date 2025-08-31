@@ -4,3 +4,10 @@ build --cxxopt='-std=c++23'
 build --cxxopt='-O0'
 build --cxxopt='-g'
 test --cache_test_results=no 
+
+# Coverage configuration
+coverage --instrumentation_filter="//:board_lib"
+coverage --instrument_test_targets=false
+coverage --combined_report=lcov
+coverage --compilation_mode=dbg
+coverage --test_output=all

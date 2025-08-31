@@ -4,6 +4,7 @@
 #
 # For more details, please check https://github.com/bazelbuild/bazel/issues/18958
 ###############################################################################
+"""Sokoban Game Project - Bazel Bzlmod configuration for external dependencies."""
 bazel_dep(name = "rules_cc", version = "0.1.4")
 
 bazel_dep(name = "hedron_compile_commands", version = "0.6.1")
@@ -11,3 +12,7 @@ local_path_override(
     module_name = "hedron_compile_commands",
     path = "../bazel-compile-commands-extractor",
 )
+
+# GoogleTest for unit testing
+bazel_dep(name = "googletest", version = "1.12.1")
+
